@@ -2,12 +2,12 @@ import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './home/home';
-import BookScreen from './book';
+import LoginScreen from './login';
+import RegisterScreen from './register';
 
 const Stack = createNativeStackNavigator();
 
-function MainView() {
+function AuthView({setIsLogin}) {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -22,8 +22,8 @@ function MainView() {
             },
         }}
       >
-        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'KIT Library' }} />
-        <Stack.Screen name="Book" component={BookScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Login' }} initialParams={{setIsLogin}} />
+        <Stack.Screen name="Register" component={RegisterScreen} options={{ title: 'Register' }} initialParams={{setIsLogin}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default MainView;
+export default AuthView;

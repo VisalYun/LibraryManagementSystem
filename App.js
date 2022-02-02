@@ -1,13 +1,13 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {LogBox} from 'react-native';
 
 import MainView from './src/views/main';
+import AuthView from './src/views/auth/auth';
 
 const App = () => {
-  // LogBox.ignoreLogs([
-  //   'Non-serializable values were found in the navigation state',
-  // ]);
-  LogBox.ignoreAllLogs(); // Ignore log notification by message
+  LogBox.ignoreLogs([
+    'Non-serializable values were found in the navigation state',
+  ]);
 
   useEffect(() => {
     const init = async () => {
@@ -15,8 +15,11 @@ const App = () => {
     };
   }, []);
 
-  return (
-    <MainView />
+  const [isLogin, setIsLogin] = useState(false);
+
+  return ( isLogin ?
+    <MainView /> :
+    <AuthView setIsLogin={setIsLogin} />
   );
 };
 

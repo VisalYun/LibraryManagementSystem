@@ -7,7 +7,7 @@ const LibraryScreen = ({navigation}) => {
         <View style={globalStyle.container}>
             <Text>Library Screen</Text>
             <TouchableOpacity onPress={() => navigation.navigate('Book')}>
-                <Text style={{backgroundColor: '#00C2FF'}}>Book Screen</Text>
+                <Text style={globalStyle.btn}>Book Screen</Text>
             </TouchableOpacity>
         </View>
     )
