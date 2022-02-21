@@ -1,26 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import {LogBox} from 'react-native';
+import React, { Component } from 'react';
+import {Account} from './Account'
+// import Account.js from ''
+// import { StyleSheet,Text,View,Image,TouchableOpacity, ScrollView, Dimensions } from 'react-native';
+// const {width} = Dimensions.get('window')
 
-import MainView from './src/views/main';
-import AuthView from './src/views/auth/auth';
 
-const App = () => {
-  LogBox.ignoreLogs([
-    'Non-serializable values were found in the navigation state',
-  ]);
-
-  useEffect(() => {
-    const init = async () => {
-      // …do multiple sync or async tasks
-    };
-  }, []);
-
-  const [isLogin, setIsLogin] = useState(false);
-
-  return ( isLogin ?
-    <MainView /> :
-    <AuthView setIsLogin={setIsLogin} />
-  );
-};
+class App extends Component{
+  render(){
+    return(
+      <Account />
+    )
+  }
+}
 
 export default App;
