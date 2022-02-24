@@ -31,23 +31,17 @@ const LoginScreen = ({navigation, route}) => {
                         onChangeText={(password) => setPassword(password)}
                     />
                 </View>
-                <View style={styles.ButtonView}>
-                    <TouchableOpacity style={styles.loginBtn}>
-                        <Text style={styles.loginText}>LOGIN</Text>
-                    </TouchableOpacity>
-                    <Text style={styles.text}>No account, <Text style={styles.register}>register here</Text></Text>
-                </View>
             </View>
-            {/* <TouchableOpacity 
+            <TouchableOpacity 
                 onPress={() => {
                     setIsLogin(true);
                 }
             }>
-                <Text style={globalStyle.btn}>Login</Text>
+            <Text style={globalStyle.btn}>Login</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-                <Text style={globalStyle.btn}>Register Screen</Text>
-            </TouchableOpacity> */}
+                <Text style={styles.text}>No account, <Text style={globalStyle.btnRegister}>Register Screen</Text></Text> 
+            </TouchableOpacity>
         </View>
     )
 }
@@ -101,17 +95,4 @@ const styles = StyleSheet.create({
         color:'black',
         marginTop:10
     },
-    register: {
-        color: '#00b8e6'
-    },
-    loginBtn: {
-        borderRadius: 10,
-        backgroundColor: '#00b8e6',
-        marginTop:30,
-        height: 50,
-        justifyContent:'center',
-        alignItems:'center',
-        width: '100%',
-        // width: Dimensions.get("window").width - 100,
-    }
 })
