@@ -1,68 +1,75 @@
-import {
-    View,
-    Text,
-    StyleSheet,
-    TextInput,
-    Dimensions,
-    TouchableOpacity,
-    KeyboardAvoidingView,
-    ScrollView,
-    Platform
-} from 'react-native';
+import * as React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native'
+import globalStyle from '../../style/globalStyle';
 
-const Register = () => {
+const RegisterScreen = ({navigation, route}) => {
+    const setIsLogin = route.params.setIsLogin
     return (
-        <KeyboardAvoidingView
-            style={{ flex: 1 }}
-            behavior={Platform.OS === "ios" ? "padding" : ""}>
-            <ScrollView contentContainerStyle={{ flex: 1 }}>
-                <View style={styles.container}>
-                    <View>
-                        <Text style={styles.mainTitle}>KIT Library</Text>
-                    </View>
-                    <View>
-                        <Text style={styles.title}>Register</Text>
-                    </View>
-                    
-                    <View style={{
-                        flex: 1,
-                        alignItems: "center",
-                        justifyContent: "center",
-                        marginTop: -(Dimensions.get("window").height / 4)
-                    }}>
-                    <View>
-                        <Text style={styles.title1}>Username</Text>
-                    </View>
-                        <TextInput
-                            style={styles.customTextInput}
-                            placeholder="username..."
-                            autoCapitalize="none"
-                        />
-                    <View>
-                        <Text style={styles.title1}>Email</Text>
-                    </View>
-                        <TextInput
-                            style={styles.customTextInput}
-                            placeholder="email..."
-                        />
-                    <View>
-                        <Text style={styles.title1}>Password</Text>
-                    </View>
-                        <TextInput
-                            style={styles.customTextInput}
-                            placeholder="password..."
-                            autoCapitalize="none"
-                            secureTextEntry={true}
-                        />
-                        <TouchableOpacity style={styles.btnRegister}>
-                            <Text style={styles.btnText}>Register</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </ScrollView>
-        </KeyboardAvoidingView>
+        <View style={globalStyle.container}>
+            <Text>Register Screen</Text>
+                <KeyboardAvoidingView
+                    style={{ flex: 1 }}
+                    behavior={Platform.OS === "ios" ? "padding" : ""}>
+                    <ScrollView contentContainerStyle={{ flex: 1 }}>
+                        <View style={styles.container}>
+                            <View>
+                                <Text style={styles.mainTitle}>KIT Library</Text>
+                            </View>
+                            <View>
+                                <Text style={styles.title}>Register</Text>
+                            </View>
+                            
+                            <View style={{
+                                flex: 1,
+                                alignItems: "center",
+                                justifyContent: "center",
+                                marginTop: -(Dimensions.get("window").height / 4)
+                            }}>
+                            <View>
+                                <Text style={styles.title1}>Username</Text>
+                            </View>
+                                <TextInput
+                                    style={styles.customTextInput}
+                                    placeholder="username..."
+                                    autoCapitalize="none"
+                                />
+                            <View>
+                                <Text style={styles.title1}>Email</Text>
+                            </View>
+                                <TextInput
+                                    style={styles.customTextInput}
+                                    placeholder="email..."
+                                />
+                            <View>
+                                <Text style={styles.title1}>Password</Text>
+                            </View>
+                                <TextInput
+                                    style={styles.customTextInput}
+                                    placeholder="password..."
+                                    autoCapitalize="none"
+                                    secureTextEntry={true}
+                                />
+                                <TouchableOpacity style={styles.btnRegister}>
+                                    <Text style={styles.btnText}>Register</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </ScrollView>
+                </KeyboardAvoidingView>
+                <TouchableOpacity 
+                    onPress={() => {
+                        setIsLogin(true);
+                    }
+                }>
+                    <Text style={globalStyle.btn}>Register</Text>
+                </TouchableOpacity>
+            </View>
     )
 }
+
+export default RegisterScreen;
+
+
 
 const styles = StyleSheet.create({
     container: {
@@ -129,5 +136,3 @@ const styles = StyleSheet.create({
     }
     
 });
-
-export default Register
