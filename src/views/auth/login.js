@@ -37,7 +37,7 @@ const LoginScreen = ({navigation, route}) => {
                     setIsLogin(true);
                 }
             }>
-            <Text style={globalStyle.btn}>Login</Text>
+                <Text style={globalStyle.btn}>Login</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                 <Text style={styles.text}>No account, <Text style={globalStyle.btnRegister}>Register Screen</Text></Text> 
@@ -45,9 +45,7 @@ const LoginScreen = ({navigation, route}) => {
         </View>
     )
 }
-
 export default LoginScreen;
-
 const styles = StyleSheet.create({
     header: {
         fontSize: 40,
@@ -75,7 +73,6 @@ const styles = StyleSheet.create({
         borderColor: '#E0E0E0',
         padding:10,
         backgroundColor: '#E0E0E0',
-
     },
     PasswordText: {
         fontSize: 15,
@@ -88,8 +85,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         borderColor: '#E0E0E0',
         padding:10,
-        backgroundColor: '#E0E0E0',
-        
+        backgroundColor: '#E0E0E0',  
     },
     text: {
         color:'black',
