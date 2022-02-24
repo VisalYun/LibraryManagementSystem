@@ -57,11 +57,8 @@ const RegisterScreen = ({navigation, route}) => {
                     </ScrollView>
                 </KeyboardAvoidingView>
             <TouchableOpacity 
-                    onPress={() => {
-                        setIsLogin(true);
-                    }
-                }>
-                    <Text style={globalStyle.btn}>Register</Text>
+                onPress={() => {setIsLogin(true);}}>
+                <Text style={globalStyle.btn}>Register</Text>
             </TouchableOpacity>
         </View>
     )
