@@ -9,16 +9,17 @@ export default {
         padding: 10,
         backgroundColor: '#00C2FF',
         borderRadius: 10,
-        backgroundColor: '#00b8e6',
         marginTop:30,
         height: 50,
         width: '100%',
         textAlign: 'center',
-        fontSize: 20
+        fontSize: 20,
+        color: '#FFFFFF'
         
         
     },
     btnRegister: {
-        color: '#00b8e6'
+        color: '#00C2FF'
+
     }
 }

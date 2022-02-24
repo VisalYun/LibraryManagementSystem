@@ -53,19 +53,19 @@ const styles = StyleSheet.create({
         fontSize: 40,
     },
     boldText: {
-        color: '#00b8e6',
+        color: '#00C2FF',
         fontSize: 30,
         fontWeight:'bold'
     },
     login: {
-        color: '#00b8e6',
+        color: '#00C2FF',
         fontSize: 15,
         fontWeight: 'bold',
         marginTop:10
     },
     EmailText: {
         fontSize: 15,
-        color: '#00b8e6',
+        color: '#00C2FF',
         marginTop: 30
     },
     inputEmail: {
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     },
     PasswordText: {
         fontSize: 15,
-        color: '#00b8e6',
+        color: '#00C2FF',
         marginTop: 30
     },
     inputPassword: {
